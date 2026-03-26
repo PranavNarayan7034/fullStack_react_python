@@ -21,17 +21,16 @@ def Createaccount(request):
 
         username = data.get('username')
         email = data.get('email')
-        password = data.get('password') 
+        password = data.get('password')
 
-        print(username, email)
-        print(password)
+        if len(username) < 1 :
+            return JsonResponse({'error':"Invalid username"})
+        if email == "":
+            return JsonResponse({'error':"Invalid email"})
+        if len(password) < 5:
+            return JsonResponse({'error':"Please use password min 5 characters"})
 
-        # if username.length < 1 :
-        #     return JsonResponse({'error':"Invalid username"})
-        # if email == "":
-        #     return JsonResponse({'error':"Invalid email"})
-        # if password.length < 5:
-        #     return JsonResponse({'error':"Please use password min 5 characters"})
+        print("Data got in backend" , username, email, password)
 
         return JsonResponse({"message": f"Data got on backend : {data}"}, status = 200)
     
