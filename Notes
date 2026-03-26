@@ -1,0 +1,50 @@
+** install requirement in main folder
+pip install django djangorestframework django-cors-headers
+
+** create a new django project for backend
+django-admin startproject backend
+cd backend/
+python manage.py startapp api
+
+** create a react project for frontend
+npm create vite@latest frontend
+cd frontend
+npm i
+
+
+
+
+** start backend server 
+
+cd backend
+python manage.py runserver 
+
+
+** start frontend server 
+
+cd frontend 
+npm run dev 
+
+
+
+cors : middleware (a fuction that exeucute before page load )
+
+
+
+axios : a package used to create api, that will connect backend from frontend 
+
+rest api methods
+    post     : send data in to backend / database 
+    get      : get data from backend / database 
+    put      : update data in backend / database 
+    delete   :  data in backend / database 
+
+
+request :
+    http://flipkart.com , http://localhost:5173 , 
+     http://127.0.0.1:8000/api/demo = http://localhost:8000/api/demo  ---> server / backend --> respone --> view on html page
+
+
+
+
+front-end : create account ,  login  --->  filling details -->  backend --->  database 
